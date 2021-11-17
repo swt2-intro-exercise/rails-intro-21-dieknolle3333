@@ -27,5 +27,10 @@ require 'rails_helper'
     Author.find_by!(first_name: local_first_name, last_name: local_last_name, homepage: local_homepage)
    end
 
+   it "should be invalid without an author's last name" do
+      @grace = FactoryBot.create :author
+      @grace.last_name = nil
+      expect(@grace).to_not be_valid
+   end
 
  end
