@@ -10,7 +10,7 @@ require 'rails_helper'
      Author.all.each do |author| 
          expect(page).to have_content author.name
          expect(page).to have_content author.homepage
-         expect(page).to have_link 'Details', href: author_path
+         expect(page).to have_link 'Show', href: author_path(author)
      end
    end
 
