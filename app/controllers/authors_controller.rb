@@ -1,4 +1,4 @@
-class AuthorController < ApplicationController
+class AuthorsController < ApplicationController
     def new
     end
 
@@ -6,6 +6,10 @@ class AuthorController < ApplicationController
        @author = Author.new(author_params)
        @author.save
        redirect_to root_path, notice: 'Success!'
+    end
+
+    def index
+        @authors = Author.all
     end
 
     def show

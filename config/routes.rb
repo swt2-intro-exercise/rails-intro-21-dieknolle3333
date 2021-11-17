@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'welcome/index'
-  resources :author
+  resources :authors
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
