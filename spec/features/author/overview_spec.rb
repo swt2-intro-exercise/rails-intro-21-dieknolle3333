@@ -16,10 +16,11 @@ require 'rails_helper'
    end
 
    it "should have a link to delete an author for every entry" do
+    @grace = FactoryBot.create :author
     visit authors_path
     init_count = Author.count
-    find('a[data-method=\'delete\'][href=\'/authors/1\']').click
-    expect(Author.count).to == init_count - 1  
+    find('a[data-method=\'delete\'][href=\'/authors/'+ @grace.id.to_s + '\']').click
+    expect(Author.count).to eq(init_count - 1) 
   end   
 
 
