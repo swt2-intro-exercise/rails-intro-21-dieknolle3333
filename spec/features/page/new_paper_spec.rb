@@ -27,4 +27,10 @@ require 'rails_helper'
     Paper.find_by!(title: local_title, venue: local_venue, year: local_year)
    end
 
+   it "should be invalid with any missing attribute" do
+    @paper = FactoryBot.create :paper
+    @paper.title = nil
+    expect(@paper).to_not be_valid
+  end
+
  end
