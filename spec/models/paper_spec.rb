@@ -13,9 +13,9 @@ RSpec.describe Paper, type: :model do
     expect(paper.year).to eq(local_year)
   end
 
-  it "should have an empty author list" do
+  it "should have an empty list of authors" do
     @paper = FactoryBot.create :paper
-    expect(@paper.authors).to eq([])
+    expect(@paper).to have_attributes(authors: [])
   end
 
 end

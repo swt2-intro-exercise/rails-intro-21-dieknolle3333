@@ -31,6 +31,6 @@ require 'rails_helper'
     @paper = FactoryBot.create :paper
     @paper.title = nil
     expect(@paper).to_not be_valid
-  end
+   end
 
  end
