@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :author do
-    # first_name { "Alan" }
-    # last_name { "Turing" }
-    # homepage { "http://wikipedia.de/Alan_Turing" }
+    first_name { "Grace" }
+    last_name { "Hopper" }
+    homepage { "https://en.wikipedia.org/wiki/Grace_Hopper" }
   end
 end

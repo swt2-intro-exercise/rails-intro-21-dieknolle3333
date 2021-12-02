@@ -2,8 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "swt2/trusty64"
-  config.vm.box_url = "https://github.com/hpi-swt2/swt2-vagrant/releases/download/v0.2/swt2-trusty64.box"
+  config.vm.box = "ubuntu/focal64"
 
   # use 32bit machine
   #config.vm.box = "swt2/trusty32"
